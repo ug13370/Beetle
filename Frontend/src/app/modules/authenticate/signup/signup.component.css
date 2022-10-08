@@ -17,6 +17,13 @@
 ::ng-deep .formField mat-label {
   color: #eeeeee !important;
 }
+::ng-deep .formField span {
+  color: #eeeeee !important;
+}
+::ng-deep .formField mat-hint {
+  color: #eeeeee !important;
+  font-size:12px;
+}
 
 .beetleLogo {
   position: absolute;

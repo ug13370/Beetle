@@ -11,62 +11,123 @@
         <mat-card-title>Sign Up</mat-card-title>
         <mat-divider></mat-divider>
         <mat-card-content>
-          <div class="row">
-            <div class="col-6">
-              <mat-form-field appearance="outline" class="formField">
-                <mat-label>First name *</mat-label>
-                <input matInput placeholder="Eg : Utkarsh" />
-              </mat-form-field>
+          <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-6">
+                <mat-form-field appearance="outline" class="formField">
+                  <mat-label>First name</mat-label>
+                  <input
+                    matInput
+                    placeholder="Eg : Utkarsh"
+                    formControlName="firstName"
+                  />
+                  <mat-error
+                    *ngIf="
+                      signUpForm.get('firstName')?.invalid &&
+                      signUpForm.get('firstName')?.touched
+                    "
+                    >Enter a first name.</mat-error
+                  >
+                </mat-form-field>
+              </div>
+              <div class="col-6">
+                <mat-form-field appearance="outline" class="formField">
+                  <mat-label>Last name</mat-label>
+                  <input
+                    matInput
+                    placeholder="Eg : Gupta"
+                    formControlName="lastName"
+                  />
+                </mat-form-field>
+              </div>
             </div>
-            <div class="col-6">
-              <mat-form-field appearance="outline" class="formField">
-                <mat-label>Last name</mat-label>
-                <input matInput placeholder="Eg : Gupta" />
-              </mat-form-field>
+            <div class="row">
+              <div class="col-12">
+                <mat-form-field appearance="outline" class="formField">
+                  <mat-label>Email</mat-label>
+                  <input
+                    matInput
+                    placeholder="Eg : abc@xyz.com"
+                    formControlName="email"
+                  />
+                  <mat-error
+                    *ngIf="
+                      signUpForm.get('email')?.invalid &&
+                      signUpForm.get('email')?.touched
+                    "
+                    >{{
+                      signUpForm.controls["email"].errors["incorrect"]
+                        ? signUpForm.controls["email"].errors["msg"]
+                        : "Please enter a valid email Id."
+                    }}</mat-error
+                  >
+                </mat-form-field>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <mat-form-field appearance="outline" class="formField">
-                <mat-label>Email *</mat-label>
-                <input matInput placeholder="Eg : abc@xyz.com" />
-              </mat-form-field>
+            <div class="row">
+              <div class="col-6">
+                <mat-form-field appearance="outline" class="formField">
+                  <mat-label>Password</mat-label>
+                  <input
+                    matInput
+                    placeholder="Eg : abc@1234"
+                    formControlName="password"
+                    type="password"
+                  />
+                  <mat-hint
+                    ><mat-icon>info</mat-icon> Atleast 5 charaters</mat-hint
+                  >
+                  <mat-error
+                    *ngIf="
+                      signUpForm.get('password')?.invalid &&
+                      signUpForm.get('password')?.touched
+                    "
+                    >Enter a valid password.</mat-error
+                  >
+                </mat-form-field>
+              </div>
+              <div class="col-6">
+                <mat-form-field appearance="outline" class="formField">
+                  <mat-label>Confirm Password</mat-label>
+                  <input
+                    matInput
+                    placeholder="Eg : abc@1234"
+                    formControlName="repeatPassword"
+                    type="password"
+                  />
+                  <mat-error
+                    *ngIf="
+                      signUpForm.get('repeatPassword')?.invalid &&
+                      signUpForm.get('repeatPassword')?.touched
+                    "
+                    >Wrong confirm password.</mat-error
+                  >
+                </mat-form-field>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <mat-form-field appearance="outline" class="formField">
-                <mat-label>Password *</mat-label>
-                <input matInput placeholder="Eg : abc@1234" />
-              </mat-form-field>
+            <div class="row" style="margin-top: 2%;">
+              <div class="col-6">
+                <button
+                  mat-button
+                  class="fillBtn mat-elevation-z7"
+                  style="width: 100%"
+                  type="submit"
+                >
+                  <mat-icon>lock_open</mat-icon> Sign Up
+                </button>
+              </div>
+              <div class="col-6">
+                <button
+                  mat-stroked-button
+                  class="outlinedBtn"
+                  style="width: 100%"
+                  type="button"
+                >
+                  Switch to Sign In
+                </button>
+              </div>
             </div>
-            <div class="col-6">
-              <mat-form-field appearance="outline" class="formField">
-                <mat-label>Confirm Password *</mat-label>
-                <input matInput placeholder="Eg : abc@1234" />
-              </mat-form-field>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <button
-                mat-button
-                class="fillBtn mat-elevation-z7"
-                style="width: 100%"
-              >
-                <mat-icon>lock_open</mat-icon> Sign Up
-              </button>
-            </div>
-            <div class="col-6">
-              <button
-                mat-stroked-button
-                class="outlinedBtn"
-                style="width: 100%"
-              >
-                Switch to Sign In
-              </button>
-            </div>
-          </div>
+          </form>
         </mat-card-content>
       </mat-card>
     </div>
