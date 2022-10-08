@@ -1,4 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: #eeeeee;
+  background-color: #222831;
+}
+.quad {
+  border-bottom: 100vh solid #ffffff;
+  border-left: 20vw solid transparent;
+  width: 56vw;
+}
+.box {
+  background-color: #393e46;
+  color: #eeeeee;
+  border-radius: 15px !important;
+  padding: 7% !important;
+  padding-top: 9% !important;
+  width: 25vw;
+  height: 50vh;
+}
+.box mat-card-title {
+  font-size: 35px;
+}
+.box mat-divider {
+  border-color: #eeeeee;
+  position: relative !important;
+  margin-top: 7% !important;
+  margin-bottom: 7% !important;
+}
+.fillBtn {
+  color: #393e46;
+  background-color: #00adb5;
+  font-size: medium;
+  height: 42px;
+}
+.outlinedBtn {
+  color: #eeeeee;
+  background-color: transparent;
+  border: 2px solid #00adb5 !important;
+  font-size: medium;
+  height: 42px;
+}

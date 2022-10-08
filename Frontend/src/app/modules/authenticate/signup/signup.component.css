@@ -1,0 +1,41 @@
+.formField {
+  width: 100%;
+}
+::ng-deep .formField .mat-form-field-outline {
+  color: #eeeeee;
+}
+::ng-deep .formField.mat-focused .mat-form-field-outline {
+  color: #eeeeee;
+}
+::ng-deep .formField input::placeholder {
+  color: #eeeeee !important;
+  opacity: 50%;
+}
+::ng-deep .formField input {
+  caret-color: #eeeeee !important;
+}
+::ng-deep .formField mat-label {
+  color: #eeeeee !important;
+}
+
+.beetleLogo {
+  position: absolute;
+  top: 300px;
+  right: 150px;
+}
+.beetleLogoImg {
+  width: 250px;
+  height: 250px;
+}
+.beetleLogoText {
+  color: #393e46;
+  text-align: center;
+  margin-top: 30%;
+}
+::ng-deep .beetleLogoText h1 {
+  font-size: 70px;
+  font-weight: 450;
+}
+::ng-deep .beetleLogoText p {
+  font-size: 25px;
+}

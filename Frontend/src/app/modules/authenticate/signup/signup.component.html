@@ -1,1 +1,93 @@
-<p>signup works!</p>
+<!-- <div class="container-sm" style="background-color: #000000;">100% wide until small breakpoint</div>
+  <div class="container-md" style="background-color: #3b0909;">100% wide until medium breakpoint</div>
+  <div class="container-lg" style="background-color: #000000;">100% wide until large breakpoint</div>
+  <div class="container-xl" style="background-color: #3b0909;">100% wide until extra large breakpoint</div>
+  <div class="container-xxl" style="background-color: #000000;">100% wide until extra extra large breakpoint</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-5 align-self-center">
+      <mat-card class="box mat-elevation-z14" style="margin-left: 5%">
+        <mat-card-title>Sign Up</mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          <div class="row">
+            <div class="col-6">
+              <mat-form-field appearance="outline" class="formField">
+                <mat-label>First name *</mat-label>
+                <input matInput placeholder="Eg : Utkarsh" />
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+              <mat-form-field appearance="outline" class="formField">
+                <mat-label>Last name</mat-label>
+                <input matInput placeholder="Eg : Gupta" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <mat-form-field appearance="outline" class="formField">
+                <mat-label>Email *</mat-label>
+                <input matInput placeholder="Eg : abc@xyz.com" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <mat-form-field appearance="outline" class="formField">
+                <mat-label>Password *</mat-label>
+                <input matInput placeholder="Eg : abc@1234" />
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+              <mat-form-field appearance="outline" class="formField">
+                <mat-label>Confirm Password *</mat-label>
+                <input matInput placeholder="Eg : abc@1234" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <button
+                mat-button
+                class="fillBtn mat-elevation-z7"
+                style="width: 100%"
+              >
+                <mat-icon>lock_open</mat-icon> Sign Up
+              </button>
+            </div>
+            <div class="col-6">
+              <button
+                mat-stroked-button
+                class="outlinedBtn"
+                style="width: 100%"
+              >
+                Switch to Sign In
+              </button>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-7">
+      <div class="quad">
+        <div class="row beetleLogo">
+          <div class="col-5">
+            <img
+              src="../../../../assets/svg/beetle.svg"
+              alt="Logo"
+              class="beetleLogoImg"
+            />
+          </div>
+          <div class="col-7">
+            <div class="beetleLogoText">
+              <h1>Beetle</h1>
+              <p>Incident Management Tool</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
