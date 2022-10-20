@@ -7,9 +7,8 @@ import { BoxComponent } from './box/box.component';
 
 @NgModule({
   declarations: [BeetleLogoComponent, BoxComponent],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, MaterialModule],
-  exports: [BeetleLogoComponent,BoxComponent],
+  imports: [FormsModule, ReactiveFormsModule, MaterialModule],
+  exports: [BeetleLogoComponent, BoxComponent],
   providers: [],
 })
 export class ComponentsModule {}
-

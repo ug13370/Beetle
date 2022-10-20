@@ -7,12 +7,14 @@ import { AuthenticateModule } from './modules/authenticate/authenticate.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BeetleComponent } from './modules/beetle/beetle.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, BeetleComponent],
   imports: [
     AppRoutingModule,
     AuthenticateModule,
+    BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
   ],
