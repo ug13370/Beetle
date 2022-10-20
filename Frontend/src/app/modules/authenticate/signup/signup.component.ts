@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ComparePassword } from '../../shared/customvalidator.validator';
 
 @Component({
@@ -9,11 +10,10 @@ import { ComparePassword } from '../../shared/customvalidator.validator';
 })
 export class SignupComponent implements OnInit {
   public signUpForm: FormGroup;
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.signUpForm = this.formBuilder.group(
       {
-        firstName: ['', [Validators.required]],
-        lastName: ['', []],
+        name: ['', [Validators.required]],
         email: [
           '',
           [
@@ -34,7 +34,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    console.log(this.signUpForm)
+    console.log(this.signUpForm);
     // Check if the email and password are correct.
     // if (
     //   this.userService.validateUser(
@@ -58,5 +58,9 @@ export class SignupComponent implements OnInit {
     //   const dialogRef = this.dialog.open(PopUpComponent);
     //   dialogRef.afterClosed().subscribe(() => {});
     // }
+  }
+
+  switchToSignin() {
+    this.router.navigate(['/signin']);
   }
 }

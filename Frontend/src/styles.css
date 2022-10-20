@@ -10,19 +10,18 @@ body {
   color: #eeeeee;
   background-color: #222831;
 }
+
 .quad {
   border-bottom: 100vh solid #ffffff;
   border-left: 20vw solid transparent;
-  width: 56vw;
+  width: 58vw;
 }
+
 .box {
   background-color: #393e46;
   color: #eeeeee;
   border-radius: 15px !important;
-  padding: 6% !important;
-  padding-top: 9% !important;
-  width: 25vw;
-  height: 50vh;
+  padding: 7% !important;
 }
 .box mat-card-title {
   font-size: 35px;
@@ -30,19 +29,23 @@ body {
 .box mat-divider {
   border-color: #eeeeee;
   position: relative !important;
-  margin-top: 7% !important;
-  margin-bottom: 7% !important;
+  margin: 7% 0% 7% 0% !important;
 }
+
 .fillBtn {
   color: #393e46;
   background-color: #00adb5;
-  font-size: medium;
-  height: 42px;
+  width:100%;
 }
 .outlinedBtn {
   color: #eeeeee;
   background-color: transparent;
   border: 2px solid #00adb5 !important;
-  font-size: medium;
-  height: 42px;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px){
+  .quad{
+    display: none;
+  }
 }

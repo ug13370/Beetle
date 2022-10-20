@@ -1,0 +1,21 @@
+.beetleLogo {
+  position: absolute;
+  top: 35%;
+  right: 7%;
+}
+.beetleLogoImg {
+  width: 115%;
+  height: 100%;
+}
+.beetleLogoText {
+  color: #393e46;
+  text-align: center;
+  margin-top: 25%;
+}
+::ng-deep .beetleLogoText h1 {
+  font-size: 70px;
+  font-weight: 450;
+}
+::ng-deep .beetleLogoText p {
+  font-size: 25px;
+}

@@ -1,154 +1,121 @@
-<!-- <div class="container-sm" style="background-color: #000000;">100% wide until small breakpoint</div>
-  <div class="container-md" style="background-color: #3b0909;">100% wide until medium breakpoint</div>
-  <div class="container-lg" style="background-color: #000000;">100% wide until large breakpoint</div>
-  <div class="container-xl" style="background-color: #3b0909;">100% wide until extra large breakpoint</div>
-  <div class="container-xxl" style="background-color: #000000;">100% wide until extra extra large breakpoint</div> -->
-
-<div class="container">
-  <div class="row">
-    <div class="col-5 align-self-center">
-      <mat-card class="box mat-elevation-z14" style="margin-left: 5%">
-        <mat-card-title>Sign Up</mat-card-title>
-        <mat-divider></mat-divider>
-        <mat-card-content>
-          <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
-            <div class="row">
-              <div class="col-6">
-                <mat-form-field appearance="outline" class="formField">
-                  <mat-label>First name</mat-label>
-                  <input
-                    matInput
-                    placeholder="Eg : Utkarsh"
-                    formControlName="firstName"
-                  />
-                  <mat-error
-                    *ngIf="
-                      signUpForm.get('firstName')?.invalid &&
-                      signUpForm.get('firstName')?.touched
-                    "
-                    >Enter a first name.</mat-error
-                  >
-                </mat-form-field>
-              </div>
-              <div class="col-6">
-                <mat-form-field appearance="outline" class="formField">
-                  <mat-label>Last name</mat-label>
-                  <input
-                    matInput
-                    placeholder="Eg : Gupta"
-                    formControlName="lastName"
-                  />
-                </mat-form-field>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <mat-form-field appearance="outline" class="formField">
-                  <mat-label>Email</mat-label>
-                  <input
-                    matInput
-                    placeholder="Eg : abc@xyz.com"
-                    formControlName="email"
-                  />
-                  <mat-error
-                    *ngIf="
-                      signUpForm.get('email')?.invalid &&
-                      signUpForm.get('email')?.touched
-                    "
-                    >{{
-                      signUpForm.controls["email"].errors["incorrect"]
-                        ? signUpForm.controls["email"].errors["msg"]
-                        : "Please enter a valid email Id."
-                    }}</mat-error
-                  >
-                </mat-form-field>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <mat-form-field appearance="outline" class="formField">
-                  <mat-label>Password</mat-label>
-                  <input
-                    matInput
-                    placeholder="Eg : abc@1234"
-                    formControlName="password"
-                    type="password"
-                  />
-                  <mat-hint
-                    ><mat-icon>info</mat-icon> Atleast 5 charaters</mat-hint
-                  >
-                  <mat-error
-                    *ngIf="
-                      signUpForm.get('password')?.invalid &&
-                      signUpForm.get('password')?.touched
-                    "
-                    >Enter a valid password.</mat-error
-                  >
-                </mat-form-field>
-              </div>
-              <div class="col-6">
-                <mat-form-field appearance="outline" class="formField">
-                  <mat-label>Confirm Password</mat-label>
-                  <input
-                    matInput
-                    placeholder="Eg : abc@1234"
-                    formControlName="repeatPassword"
-                    type="password"
-                  />
-                  <mat-error
-                    *ngIf="
-                      signUpForm.get('repeatPassword')?.invalid &&
-                      signUpForm.get('repeatPassword')?.touched
-                    "
-                    >Wrong confirm password.</mat-error
-                  >
-                </mat-form-field>
-              </div>
-            </div>
-            <div class="row" style="margin-top: 2%;">
-              <div class="col-6">
-                <button
-                  mat-button
-                  class="fillBtn mat-elevation-z7"
-                  style="width: 100%"
-                  type="submit"
+<!-- <app-beetle-logo></app-beetle-logo> -->
+<div class="row" style="height: 100vh">
+  <div class="col-1"></div>
+  <div class="col-10 col-md-5 col-lg-4 align-self-center">
+    <mat-card class="box mat-elevation-z14">
+      <mat-card-title>Sign Up</mat-card-title>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+          <div class="row gy-3">
+            <div class="col-12">
+              <mat-form-field appearance="outline" class="formField">
+                <mat-label>Name</mat-label>
+                <input
+                  matInput
+                  placeholder="Eg : Utkarsh"
+                  formControlName="name"
+                />
+                <mat-error
+                  *ngIf="
+                    signUpForm.get('firstName')?.invalid &&
+                    signUpForm.get('firstName')?.touched
+                  "
+                  >Enter your name.</mat-error
                 >
-                  <mat-icon>lock_open</mat-icon> Sign Up
-                </button>
-              </div>
-              <div class="col-6">
-                <button
-                  mat-stroked-button
-                  class="outlinedBtn"
-                  style="width: 100%"
-                  type="button"
+                <mat-hint
+                  ><mat-icon>info</mat-icon> Enter your full name</mat-hint
                 >
-                  Switch to Sign In
-                </button>
-              </div>
+              </mat-form-field>
             </div>
-          </form>
-        </mat-card-content>
-      </mat-card>
-    </div>
-    <div class="col-7">
-      <div class="quad">
-        <div class="row beetleLogo">
-          <div class="col-5">
-            <img
-              src="../../../../assets/svg/beetle.svg"
-              alt="Logo"
-              class="beetleLogoImg"
-            />
-          </div>
-          <div class="col-7">
-            <div class="beetleLogoText">
-              <h1>Beetle</h1>
-              <p>Incident Management Tool</p>
+            <div class="col-12">
+              <mat-form-field appearance="outline" class="formField">
+                <mat-label>Email</mat-label>
+                <input
+                  matInput
+                  placeholder="Eg : abc@xyz.com"
+                  formControlName="email"
+                />
+                <mat-error
+                  *ngIf="
+                    signUpForm.get('email')?.invalid &&
+                    signUpForm.get('email')?.touched
+                  "
+                  >{{
+                    signUpForm.controls["email"].errors["incorrect"]
+                      ? signUpForm.controls["email"].errors["msg"]
+                      : "Please enter a valid email Id."
+                  }}</mat-error
+                >
+                <mat-hint
+                  ><mat-icon>info</mat-icon> Must have format
+                  'abc@xyz.com'</mat-hint
+                >
+              </mat-form-field>
+            </div>
+            <div class="col-12">
+              <mat-form-field appearance="outline" class="formField">
+                <mat-label>Password</mat-label>
+                <input
+                  matInput
+                  placeholder="Eg : abc@1234"
+                  formControlName="password"
+                  type="password"
+                />
+                <mat-hint
+                  ><mat-icon>info</mat-icon> Atleast 5 charaters</mat-hint
+                >
+                <mat-error
+                  *ngIf="
+                    signUpForm.get('password')?.invalid &&
+                    signUpForm.get('password')?.touched
+                  "
+                  >Enter a valid password.</mat-error
+                >
+              </mat-form-field>
+            </div>
+            <div class="col-12">
+              <mat-form-field appearance="outline" class="formField">
+                <mat-label>Confirm Password</mat-label>
+                <input
+                  matInput
+                  placeholder="Eg : abc@1234"
+                  formControlName="repeatPassword"
+                  type="password"
+                />
+                <mat-error
+                  *ngIf="
+                    signUpForm.get('repeatPassword')?.invalid &&
+                    signUpForm.get('repeatPassword')?.touched
+                  "
+                  >Wrong confirm password.</mat-error
+                >
+                <mat-hint
+                  ><mat-icon>info</mat-icon> Atleast 5 charaters</mat-hint
+                >
+              </mat-form-field>
+            </div>
+            <div class="col-12">
+              <button mat-button class="fillBtn mat-elevation-z7" type="submit">
+                <mat-icon>lock_open</mat-icon> Sign Up
+              </button>
+            </div>
+            <div class="col-12">
+              <button
+                mat-stroked-button
+                class="outlinedBtn"
+                type="button"
+                (click)="switchToSignin()"
+              >
+                Switch to Sign In
+              </button>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-1 col-md-6 col-lg-7">
+    <div class="quad"></div>
   </div>
 </div>
