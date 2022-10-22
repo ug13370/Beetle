@@ -7,20 +7,22 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
 import { AboutComponent } from './pages/about/about.component';
 import { BeetleRoutingModule } from './beetle-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
     ProjectsComponent,
     DashboardComponent,
     TasksComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     FormsModule,
+    // BrowserModule,
     ReactiveFormsModule,
     MaterialModule,
+    BeetleRoutingModule,
     ComponentsModule,
-    BeetleRoutingModule
   ],
   providers: [],
 })

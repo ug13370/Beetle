@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BeetleComponent } from './modules/beetle/beetle.component';
+import { ComponentsModule } from './modules/shared/components/components.module';
 
 @NgModule({
   declarations: [AppComponent, BeetleComponent],
@@ -17,6 +18,7 @@ import { BeetleComponent } from './modules/beetle/beetle.component';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
