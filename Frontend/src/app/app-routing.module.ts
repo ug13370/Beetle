@@ -4,7 +4,7 @@ import { SigninComponent } from './modules/authenticate/signin/signin.component'
 import { SignupComponent } from './modules/authenticate/signup/signup.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/beetle', pathMatch: 'full' },
+  { path: '', redirectTo: '/signup', pathMatch: 'full' },
   {
     path: 'beetle',
     loadChildren: () =>

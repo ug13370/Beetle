@@ -1,0 +1,131 @@
+.logo {
+  padding: 1%;
+}
+.logoIcon {
+  width: 30%;
+  height: auto;
+}
+.logoText {
+  display: inline-block;
+  text-transform: uppercase;
+  vertical-align: middle;
+  letter-spacing: 3px;
+  font-size: 2.5vw;
+  font-weight: 350;
+  color: #eeeeee;
+}
+
+.desc {
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+}
+::ng-deep .desc h2 {
+  text-transform: uppercase;
+  font-size: 2vw;
+  font-weight: 200;
+  letter-spacing: 0.5vw;
+}
+::ng-deep .desc p {
+  text-transform: uppercase;
+  font-size: 1vw;
+  font-weight: 200;
+  letter-spacing: 0.3vw;
+  color: #787676;
+}
+
+.profile {
+  margin: auto;
+  /* padding: 0% 2% 0% 8%; */
+}
+.boxAddon {
+  padding: 4% !important;
+  margin: 0%;
+}
+.userIcon {
+  width: 23%;
+  height: auto;
+  margin-right: 8%;
+}
+.userText {
+  display: inline-block;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #eeeeee;
+}
+.userCaret {
+  width: 6%;
+  height: auto;
+  margin-left: 3%;
+}
+
+.profileBox {
+  text-align: end;
+}
+.profileIcons {
+  text-align: end;
+}
+.hamburgerIcon {
+  width: 15%;
+  height: auto;
+}
+
+@media only screen and (min-width: 0px) {
+  .logoIcon {
+    width: 35%;
+  }
+  .logoText {
+    font-size: 5vw;
+  }
+  ::ng-deep .desc h2 {
+    font-size: 4vw;
+    margin: auto;
+  }
+  ::ng-deep .desc p {
+    display: none;
+  }
+  .profileBox {
+    display: none;
+  }
+  .profileIcons {
+    display: block;
+  }
+}
+@media only screen and (min-width: 766px) {
+  .logoIcon {
+    width: 30%;
+  }
+  .logoText {
+    font-size: 2.5vw;
+  }
+  ::ng-deep .desc h2 {
+    font-size: 2vw;
+    margin-bottom: 0%;
+  }
+  ::ng-deep .desc p {
+    display: inline;
+  }
+  .profileBox {
+    display: block;
+  }
+  .profileIcons {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  ::ng-deep .desc h2 {
+    margin-bottom: 2%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  ::ng-deep .desc h2 {
+    margin-bottom: 2%;
+  }
+}
+@media only screen and (min-width: 1441px) {
+  ::ng-deep .desc h2 {
+    margin-bottom: 3%;
+  }
+}
